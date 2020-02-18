@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/SIGINT-crisis/static/css/main.8ef420b9.chunk.css",
+    "main.js": "/SIGINT-crisis/static/js/main.e6faf0c5.chunk.js",
+    "main.js.map": "/SIGINT-crisis/static/js/main.e6faf0c5.chunk.js.map",
+    "runtime-main.js": "/SIGINT-crisis/static/js/runtime-main.e2eae77e.js",
+    "runtime-main.js.map": "/SIGINT-crisis/static/js/runtime-main.e2eae77e.js.map",
+    "static/js/2.b7710139.chunk.js": "/SIGINT-crisis/static/js/2.b7710139.chunk.js",
+    "static/js/2.b7710139.chunk.js.map": "/SIGINT-crisis/static/js/2.b7710139.chunk.js.map",
+    "index.html": "/SIGINT-crisis/index.html",
+    "precache-manifest.41cee85d9bdebba2d5b287ce89e0fb70.js": "/SIGINT-crisis/precache-manifest.41cee85d9bdebba2d5b287ce89e0fb70.js",
+    "service-worker.js": "/SIGINT-crisis/service-worker.js",
+    "static/css/main.8ef420b9.chunk.css.map": "/SIGINT-crisis/static/css/main.8ef420b9.chunk.css.map",
+    "static/js/2.b7710139.chunk.js.LICENSE.txt": "/SIGINT-crisis/static/js/2.b7710139.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e2eae77e.js",
+    "static/js/2.b7710139.chunk.js",
+    "static/css/main.8ef420b9.chunk.css",
+    "static/js/main.e6faf0c5.chunk.js"
+  ]
+}
