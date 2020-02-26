@@ -37,6 +37,7 @@ class Terminal extends React.Component<terminalProps,terminalState> {
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.deleteMessage = this.deleteMessage.bind(this);
         
     }
 
@@ -84,6 +85,20 @@ class Terminal extends React.Component<terminalProps,terminalState> {
             }
         })
         .catch((err) => console.error(`Failed to find document: ${err}`));
+    }
+
+    deleteMessage(message: string) {
+        const query = { "_id": this.state.documentid };
+        const update = { "$pull": { "message": message} };
+        const options = { "upsert": false };
+        this.state.messageCollection!.updateOne(query, update, options)
+        .then(result => {
+            const { matchedCount, modifiedCount } = result;
+            if(matchedCount && modifiedCount) {
+            console.log(`Successfully deleted the item.`)
+            this.updateMessages();
+            }
+        })
     }
 
     sendMessage(message: string) {
@@ -136,17 +151,17 @@ class Terminal extends React.Component<terminalProps,terminalState> {
                             <div className="messageBody">
                                 {message}
                             </div>
+                            <button className="button" onClick={() => this.deleteMessage(message)}>X</button>
                         </div>
                     )
                 })}
                 </div>
 
-            <form onSubmit={this.handleSubmit}>
-                <label>
-                Name:
-                <input type="text" value={this.state.text} onChange={this.handleChange} />
-                </label>
-            </form>
+                <form className = "form" onSubmit={this.handleSubmit}>
+                    <label>
+                    <input className="input" type="text" value={this.state.text} onChange={this.handleChange} />
+                    </label>
+                </form>
 
             </div>
         );

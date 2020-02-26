@@ -26,3 +26,28 @@
 .messageBody {
     margin-left: 1vw;
 }
+
+.form {
+    width: 100vw;
+}
+
+.input {
+    width: 100vw;
+    height: 5vh;
+    font-size: 1.5vw;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.button {
+    margin-left: .5vw;
+    color: black;
+    background-color: black;
+    border: none;
+}
+
+.button:hover {
+    color: white;
+    cursor: pointer;
+}
